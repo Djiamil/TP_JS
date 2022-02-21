@@ -1,0 +1,53 @@
+
+.conteneur{
+    background-color: antiquewhite;
+    border: 0.4em solid red;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+.caisse{
+    background-color: azure;
+    display: flex;
+    flex: 0.3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+#milieu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    border: 2px solid rgba(0, 0, 0, 0.692);
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    margin: 10px 0;
+    padding: 0;
+}
+.btn:hover{
+    background-color: red;
+
+}
+
+p{
+    display: flex;
+    margin: 1em;
+    font-size: 2em;
+   
+}
+p:hover{
+    background-color: blue;
+}
+.actived{
+    background-color: rgb(255, 196, 245);
+}

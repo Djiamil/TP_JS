@@ -1,0 +1,13 @@
+
+
+.conteneur{
+        background-color: antiquewhite;
+        border: 0.4em solid red;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+}

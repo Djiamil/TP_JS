@@ -1,0 +1,36 @@
+/* *{
+    box-sizing: border-box;
+} */
+.conteneur{
+    background-color: #00ccff;
+    border:0.5em solid red;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column;
+    background-size: cover; */
+}
+.header-top{
+    margin: 1em;
+}
+.nav{
+    background-color: #00ccff;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.header-top-top{
+    background-color: rgb(23, 206, 121);
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2em;
+}
+.fa{
+    margin-right:0.5em;
+    color: white;
+}
+
+textarea{
+    resize : none;
+}
