@@ -43,11 +43,15 @@ p{
     display: flex;
     margin: 1em;
     font-size: 2em;
-   
+}
+.survol{
+    background-color: blue;
+}
+ /*  
 }
 p:hover{
     background-color: blue;
 }
 .actived{
     background-color: rgb(255, 196, 245);
-}
+} */

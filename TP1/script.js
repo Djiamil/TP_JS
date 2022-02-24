@@ -1,33 +1,73 @@
-const LesP=document.querySelectorAll('p');
+
 const divGauche= document.querySelector('#divGauche');
 const divDroite= document.querySelector('#divDroite');
 const droite= document.querySelector('#btn1');
 const gauche= document.querySelector('#btn2');
 
+const tab=['Mon Premier','Mon Deuxieme','Mon troisieme','Mon Quatrieme'];
+  for (let i = 0; i < tab.length; i++) {
+    const para = document.createElement('p');
+    para.innerHTML = tab[i];
+    para.id='paragraphe';
+    divGauche.appendChild(para);
 
-function changePlace(){
+para.addEventListener('mousemove', function(){
+  para.className='survol';
+})
+droite.addEventListener('click',function(){
+  if(para.className ==='survol'){
+    para.parentNode.removeChild(para);
+    divDroite.appendChild(para);
+    para.className= "";
+  }
+  desButton(divGauche,droite);
+  desButton(divDroite,gauche);
+})
+gauche.addEventListener('click',function(){
+  if(para.className ==='survol'){
+    para.parentNode.removeChild(para);
+    divGauche.appendChild(para);
+    para.className= "";
+  }
+  desButton(divDroite,gauche);
+  desButton(divGauche,droite);
+})
+}
+function desButton(ddiv,Bbutton){
+  if(ddiv.childNodes.length ===0){
+    Bbutton.disabled = true;
+  }else{
+    Bbutton.disabled=false;
+  }
+}
+desButton(divGauche,droite);
+desButton(divDroite,gauche);
 
-for (let i = 0; i < LesP.length; i++) {
-  LesP[i].addEventListener('click', function(){
-    LesP[i].classList.toggle('actived');
 
-    droite.addEventListener('click',function(){
-      const select=document.querySelector('.actived');
-      divDroite.appendChild(select);
 
-      gauche.addEventListener('click', function(){
-        const select=document.querySelector('.actived');
-        divGauche.appendChild(select);
+// function changePlace(){
 
-      });
+// for (let i = 0; i < LesP.length; i++) {
+//   LesP[i].addEventListener('click', function(){
+//     LesP[i].classList.toggle('actived');
 
-    });
+//     droite.addEventListener('click',function(){
+//       const select=document.querySelector('.actived');
+//       divDroite.appendChild(select);
+
+//       gauche.addEventListener('click', function(){
+//         const select=document.querySelector('.actived');
+//         divGauche.appendChild(select);
+
+//       });
+
+//     });
 
   
-});
-}
-}
-changePlace();
+// });
+// }
+// }
+// changePlace();
 
 
 
